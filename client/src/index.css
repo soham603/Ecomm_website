@@ -6,20 +6,6 @@
   box-sizing: border-box; 
 }
 
-/* navbar css */
-.navbar{
-  font-size: 20px;
-  line-height: 26px;
-  text-transform: uppercase;
-  box-shadow: 0 8px 6px -6px gray;
-  border-bottom: 1px solid gray;
-}
-
-
-.nav-link{
-  font-family: "Raleway";
-  font-weight: 800 !important;
-}
 
 /* footer css */
 .footer {

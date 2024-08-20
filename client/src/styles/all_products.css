@@ -1,0 +1,35 @@
+.product-link {
+    text-decoration: none; /* Removes underline from the links */
+    color: inherit; /* Ensures the card text color is inherited from parent */
+  }
+
+  .descppp{
+    font-size: 0.875rem;
+    color: #555;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden;    /* Hide text that overflows the container */
+    text-overflow: ellipsis; /* Add '...' when text overflows */
+  }
+  
+  
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Slightly lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Enhanced shadow effect */
+  }
+  
+  .card-img-top {
+    border-bottom: 1px solid #ddd; /* Adds a border between the image and card body */
+  }
+
+  .admin-menu-container {
+    position: relative;
+    margin-top: 50px; /* Adjust as needed */
+  }
+  
+  .footer-spacing{
+    margin-bottom: 100px;
+  }

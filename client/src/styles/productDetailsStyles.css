@@ -16,6 +16,7 @@
   .similar-products .card {
     background-color: rgba(128, 128, 128, 0.097);
     width: 18rem;
+    max-height: 400px;
   }
   
   .similar-products .card-name-price {
@@ -46,5 +47,55 @@
   }
   
   .similar-products .card-img-top {
-    height: 300px !important;
+    height: 200px !important;
   }
+
+  /* Container for the product details */
+.product-details {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Styling for product image */
+.product-details .img-fluid {
+  border-radius: 8px;
+}
+
+/* Styling for product details on the right */
+.product-details-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Styling for similar products section */
+.similar-products {
+  margin-top: 3rem;
+}
+
+.similar-products h3 {
+  margin-bottom: 1rem;
+}
+
+.similar-products .card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.similar-products .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.similar-products .card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.similar-products .card-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+

@@ -2,16 +2,16 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
-import SearchInput from './../Froms/searchInput';
+import SearchInput from "./../Froms/searchInput";
 import useCategory from "../../Hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
-
+import "../../styles/headerStyles.css";
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [cart] = useCart();
   const categories = useCategory();
-  
+
   const handleLogout = () => {
     setAuth({
       ...auth,
@@ -24,9 +24,10 @@ const Header = () => {
       position: "top-center",
     });
   };
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -43,8 +44,10 @@ const Header = () => {
             <NavLink to="/" className="navbar-brand">
               Ecommerce App
             </NavLink>
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <div className="navbar-center">
               <SearchInput />
+            </div>
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink to="/" className="nav-link active" aria-current="page">
                   Home
@@ -68,7 +71,7 @@ const Header = () => {
                   <li className="nav-item dropdown">
                     <NavLink
                       className="nav-link dropdown-toggle"
-                      href="#"
+                      to="#"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
@@ -80,7 +83,6 @@ const Header = () => {
                         <NavLink
                           to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}
                           className="dropdown-item"
-                          href="#"
                         >
                           DashBoard
                         </NavLink>
@@ -98,7 +100,7 @@ const Header = () => {
                   </li>
                 </>
               )}
-               <li className="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
                   to={"/categories"}
@@ -113,22 +115,19 @@ const Header = () => {
                     </Link>
                   </li>
                   {categories?.map((c) => (
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        to={`/category/${c.slug}`}
-                      >
+                    <li key={c.slug}>
+                      <Link className="dropdown-item" to={`/category/${c.slug}`}>
                         {c.name}
                       </Link>
                     </li>
                   ))}
                 </ul>
-              </li>     
+              </li>
               <li className="nav-item">
-                <Badge count={cart?.length} showZero>
-                  <NavLink to="/cart" className="nav-link">Cart
-                  </NavLink>
-                </Badge>
+                <NavLink to="/cart" className="nav-link">
+                  Cart
+                  <Badge count={cart?.length} showZero />
+                </NavLink>
               </li>
             </ul>
           </div>

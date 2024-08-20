@@ -6,6 +6,7 @@ import Layout from "../../components/layout/layout";
 import { useAuth } from "../../context/auth";
 import moment from "moment";
 import { Select } from "antd";
+
 const { Option } = Select;
 
 const AdminOrders = () => {
@@ -13,12 +14,13 @@ const AdminOrders = () => {
     "Not Process",
     "Processing",
     "Shipped",
-    "deliverd",
+    "delivered",
     "cancel",
   ]);
   const [changeStatus, setCHangeStatus] = useState("");
   const [orders, setOrders] = useState([]);
   const [auth, setAuth] = useAuth();
+
   const getOrders = async () => {
     try {
       const { data } = await axios.get("/api/v1/auth/all-orders");
@@ -43,24 +45,25 @@ const AdminOrders = () => {
       console.log(error);
     }
   };
+
   return (
     <Layout title={"All Orders Data"}>
       <div className="row dashboard">
-        <div className="col-md-3">
-          <AdminMenu />
-        </div>
-        <div className="col-md-9">
+      <div className="col-md-3" style={{marginTop: '70px', paddingLeft : '10px'}}>
+            <AdminMenu />
+          </div>
+        <div className="col-md-9" style={{marginTop : '10px'}}>
           <h1 className="text-center">All Orders</h1>
           {orders?.map((o, i) => {
             return (
-              <div className="border shadow">
+              <div className="border shadow mb-4" key={o._id}>
                 <table className="table">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
                       <th scope="col">Status</th>
                       <th scope="col">Buyer</th>
-                      <th scope="col"> date</th>
+                      <th scope="col">Date</th>
                       <th scope="col">Payment</th>
                       <th scope="col">Quantity</th>
                     </tr>
@@ -82,36 +85,38 @@ const AdminOrders = () => {
                         </Select>
                       </td>
                       <td>{o?.buyer?.name}</td>
-                      <td>{moment(o?.createAt).fromNow()}</td>
+                      <td>{moment(o?.createdAt).fromNow()}</td>
                       <td>{o?.payment.success ? "Success" : "Failed"}</td>
                       <td>{o?.products?.length}</td>
                     </tr>
+                    {o?.products?.map((p) => (
+                      <tr key={p._id}>
+                        <td colSpan="6">
+                          <div className="row mb-2 p-2 card flex-row align-items-center" style={{ border: '1px solid #ddd', borderRadius: '4px', marginLeft: '10px'}}>
+                            <div className="col-md-4" style={{ padding: '5px' }}>
+                              <img
+                                src={`/api/v1/products/get-product-photo/${p._id}`}
+                                alt={p.name}
+                                style={{ width: '80px', height: '80px', objectFit: 'cover' }}
+                              />
+                            </div>
+                            <div className="col-md-8" style={{ padding: '5px' }}>
+                              <p style={{ fontSize: '14px', margin: '0' }}><strong>Name:</strong> {p.name}</p>
+                              <p style={{ fontSize: '14px', margin: '0' }}><strong>Price:</strong> {p.price}</p>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
-                <div className="container">
-                  {o?.products?.map((p, i) => (
-                    <div className="row mb-2 p-3 card flex-row" key={p._id}>
-                      <div className="col-md-4">
-                        <img
-                          src={`/api/v1/products/get-product-photo/${p._id}`}
-                          className="card-img-top"
-                          alt={p.name}
-                          width="100px"
-                          height={"100px"}
-                        />
-                      </div>
-                      <div className="col-md-8">
-                        <p>{p.name}</p>
-                        <p>{p.description.substring(0, 30)}</p>
-                        <p>Price : {p.price}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
             );
           })}
         </div>
+      </div>
+      <div className="footer-spacing" style={{marginBottom : '70px'}}>
+
       </div>
     </Layout>
   );

@@ -1,0 +1,63 @@
+.admin-db-header {
+    color: black;
+    border-radius: 8px;
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    margin-top: 20px;
+  }
+
+  .row-adb{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-items: stretch;
+  }
+  
+  .admin-db-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .admin-db-menu {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-db-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-db-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .admin-db-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .admin-db-info {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .admin-db-label {
+    font-weight: bold;
+    color: #495057;
+  }
+  
+
+  .footer-space {
+    height: 100px; /* Adjust the height to ensure space below products */
+} 

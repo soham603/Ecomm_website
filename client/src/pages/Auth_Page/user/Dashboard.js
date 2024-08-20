@@ -1,13 +1,13 @@
 import React from 'react';
 import Layout from '../../../components/layout/layout';
 import UserMenu from '../../../components/layout/UserMenu';
+import "../../../styles/category_indi.css";
 import { useAuth } from '../../../context/auth';
 
 const Dashboard = () => {
   const [auth] = useAuth();
   return (
     <Layout title={"User Dashboard"}>
-      <h1>Dashboard Page</h1>
         <div className='container-fluid m-3 p-3'>
             <div className='row'>
                 <div className='col-md-3'>
@@ -22,6 +22,9 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
+        </div>
+        <div className='footer-spacing'>
+
         </div>
     </Layout>
   )

@@ -1,0 +1,54 @@
+/* CategoryProduct.css */
+.indi-cat-container {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.indi-cat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.indi-cat-card {
+    align-content: space-evenly;
+    border-radius: 20px;
+    background-color: bisque;
+    max-height: 450px;
+    margin-left: 5%;
+    margin-right: 2.5%;
+    flex: 1 1 calc(25% - 1rem); /* Adjust width to fit 4 cards per row */
+    margin-bottom: 1rem;
+    max-width: 18rem; /* Ensure card width */
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Center-align the content */
+}
+
+.indi-cat-card img {
+    align-self: center;
+    margin-top: 1rem;
+    border-radius: 20px;
+    width: calc(100% - 2rem); /* Ensure image covers card width */
+    height: 200px; /* Adjust image height */
+    object-fit: fill;
+     /* Ensure the image covers the area without distortion */
+}
+
+.indi-cat-card-body {
+    padding: 1rem;
+}
+
+.indi-cat-card-title {
+    margin-bottom: 0.5rem;
+}
+
+.indi-cat-card-price {
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #007bff; /* Customize price color if needed */
+}
+
+.footer-spacing {
+    height: 500px; /* Adjust the height to ensure space below products */
+}

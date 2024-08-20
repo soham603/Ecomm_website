@@ -1,0 +1,69 @@
+.hpg-title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.filter-section {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    margin-bottom: 10%;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    margin-left: 1rem; /* Add left margin to the filter section */
+}
+
+.checkbox-group .ant-checkbox-wrapper{
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black; /* Change this to your desired text color */
+}
+
+.radio-group{
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black; /* Change this to your desired text color */
+}
+  
+  .filter-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+
+  .filter-category,
+  .filter-price {
+    margin-bottom: 20px;
+  }
+  
+  .checkbox-group,
+  .radio-group {
+    margin-top: 10px;
+  }
+  
+  .checkbox-group .ant-checkbox-wrapper,
+  .radio-group .ant-radio-wrapper {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .reset-button {
+    margin-top: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reset-button:hover {
+    background-color: #c82333;
+  }

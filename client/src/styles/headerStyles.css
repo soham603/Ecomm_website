@@ -1,0 +1,128 @@
+/* headerStyles.css */
+
+/* Ensure there's some gap around the navbar */
+html, body {
+  overflow-x: hidden;
+}
+
+.navbar-brand {
+  display: flex; /* Use flex to align text and logo */
+  align-items: center; /* Center items vertically */
+  font-weight: 800; /* Make the text bold */
+  font-size: 24px; /* Adjust font size if needed */
+  color: white; /* Ensure text is white */
+  text-transform: uppercase; /* Optional: uppercase text */
+  gap: 10px; /* Space between the logo and text */
+}
+
+.custom-navbar {
+  margin-top: 17px;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 60px !important; /* Adjust margin as needed */
+  background-color: rgba(0, 0, 0, 0.8) !important; /* Light black background with transparency */
+  border-radius: 8px; /* Rounded corners for the navbar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.navbar{
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px gray;
+  border-bottom: 1px solid gray;
+}
+
+
+.nav-link{
+  font-family: "Raleway";
+  font-weight: 800 !important;
+  display: flex;
+}
+
+/* Style for the navbar links */
+.navbar-nav .nav-link,
+.navbar-brand {
+  font-size: large;
+  color: white !important; /* White color for all elements */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effect */
+  padding: 8px 12px; /* Add padding for spacing */
+  border-radius: 4px; /* Rounded corners for the hover effect */
+  margin-right: 15px; /* Increase space between links */
+  display: flex;
+  align-items: center; /* Align text and badges vertically */
+}
+
+/* Add specific styles to the individual list items for more spacing */
+.navbar-nav .nav-item {
+  margin-right: 10px; /* Increase space between nav items */
+}
+
+/* Align badge in line with text */
+.nav-link .badge {
+  margin-left: 5px; /* Add some space between text and badge */
+  display: inline-block; /* Ensure badge is inline with text */
+  vertical-align: middle; /* Align the badge with the text vertically */
+}
+
+/* Hover effect for navbar links */
+.navbar-nav .nav-link:hover,
+.navbar-brand:hover {
+  color: white !important; /* Keep text white on hover */
+  background-color: #007bff !important; /* Blue color background on hover */
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.5); /* Blue shadow on hover */
+}
+
+/* Dropdown menu customization */
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.9) !important; /* Darker transparent background for dropdown */
+  border: none !important; /* Remove border from dropdown */
+}
+
+/* Dropdown item customization */
+.dropdown-item {
+  color: white !important; /* White color for dropdown items */
+  padding: 8px 12px; /* Add padding for spacing */
+  border-radius: 4px; /* Rounded corners for hover effect */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+  background-color: #007bff !important; /* Blue background on hover */
+  color: white !important; /* White text on hover */
+}
+
+/* Badge styling */
+.badge {
+  background-color: #007bff !important; /* Blue color for the badge */
+  color: white !important; /* White text inside badge */
+}
+
+/* Centralize the search bar */
+.navbar-center {
+  flex: 1; /* Allow search bar to take up space */
+  display: flex;
+  justify-content: center; /* Center the search bar */
+}
+
+@media (max-width: 768px) {
+  .custom-navbar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: smaller;
+    margin-right: 5px;
+  }
+}
+
+.nav-link .ant-badge {
+  margin-left: 8px; /* Add space between text and badge */
+  font-size: 14px; /* Adjust badge font size if needed */
+}
+
+/* Optionally, adjust the badge position for better alignment */
+.nav-link .ant-badge .ant-badge-count {
+  vertical-align: middle; /* Ensure badge is aligned with text */
+}

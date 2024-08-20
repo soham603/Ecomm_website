@@ -1,24 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import useCategory from "../Hooks/useCategory";
 import Layout from "../components/layout/layout";
+import "../styles/AllCatrgoryPage.css"; // Import your custom styles
 
 const CategoryPage = () => {
   const categories = useCategory();
+
   return (
     <Layout title={"All Categories"}>
-      <div className="container" style={{ marginTop: "100px" }}>
-        <div className="row container">
-          {categories.map((c) => (
-            <div className="col-md-4 mt-5 mb-3 gx-3 gy-3" key={c._id}>
-              <div className="card">
-                <Link to={`/category/${c.slug}`} className="btn cat-btn">
-                  {c.name}
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="category-container">
+        {categories.map((c) => (
+          <div className="category-card" key={c._id}>
+            <Link to={`/category/${c.slug}`} className="category-link">
+              {c.name}
+            </Link>
+          </div>
+        ))}
       </div>
     </Layout>
   );

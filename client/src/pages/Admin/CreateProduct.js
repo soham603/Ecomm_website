@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
 import { useNavigate } from "react-router-dom";
+import "../../styles/create_category_admin.css"
+
 const { Option } = Select;
 
 const CreateProduct = () => {
@@ -68,7 +70,7 @@ const CreateProduct = () => {
           <div className="col-md-3">
             <AdminMenu />
           </div>
-          <div className="col-md-9">
+          <div className="col-md-9 ad-bd-title">
             <h1>Create New Product</h1>
             <div className="m-1 w-75">
               <Select

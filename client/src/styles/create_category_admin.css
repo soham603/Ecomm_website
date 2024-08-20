@@ -1,0 +1,27 @@
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between buttons */
+  margin-right: 30%;
+}
+
+.button-full-width {
+  margin-right: 30%;
+  width: 150px;
+}
+
+.ad-bd-keys{
+    font-weight: medium;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.ad-bd-title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+}
+
+.ad-bd-title h1 {
+    margin-left: 15px; /* Adjust this value to move the text rightwards */
+    margin-bottom: 0;
+}

@@ -1,0 +1,20 @@
+.card {
+  max-width: 150px; /* Limit the width of the card */
+  max-height: 100px;
+  margin-bottom: 10px; /* Add space between cards */
+  padding: 10px; /* Add some padding inside the card */
+  background-color: #f8f9fa; /* Light gray background for better contrast */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.card img {
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain the aspect ratio */
+  margin-bottom: 5px; /* Space between image and text */
+}
+
+.card p {
+  font-size: 0.9rem; /* Smaller font size for text */
+  margin: 0; /* Remove default margins */
+}
