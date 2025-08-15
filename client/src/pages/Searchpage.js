@@ -12,7 +12,7 @@ const Searchpage = () => {
                 <h6>
                     {values?.results.length < 1 ? "No Products Found" : `Found ${values?.results.length}`}
                 </h6>
-                <div className='d-flex flex-wrap mt-4'>
+                <div className='d-flex flex-wrap mt-4 mb-10'>
                 {values?.results.map((p) => (
               <div className="card m-2" style={{ width: "18rem" }}>
                 <img
